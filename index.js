@@ -142,7 +142,7 @@ bot.command('info', (ctx) => {
   
   
 });
-bot.command('nombre', (ctx) => ctx.reply(ctx.from.username));
+bot.command('registrar', (ctx) => ctx.reply(ctx.from.username));
 bot.command('enviar', ctx => {
 
   
