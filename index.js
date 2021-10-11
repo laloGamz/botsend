@@ -13,6 +13,6 @@ const bot = new Telegraf('1969516967:AAFPXAcbSn3pZHCfcE3MD6rfyMq-sLvLgIA');
 bot.use(session());
 //bot.use(stage.middleware());
 
-bot.command('nombre', (ctx) => ctx.reply(ctx.from.username));
+bot.command('name', (ctx) => ctx.reply(ctx.from.username));
 
 bot.launch();
