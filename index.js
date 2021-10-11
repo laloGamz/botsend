@@ -57,7 +57,7 @@ const superWizard = new WizardScene(
 
                 rows2 = await query(`UPDATE user SET credito=${creditos -1} WHERE llave="${ctx.wizard.state.data.key}"`);
 
-                const mails =['golondrinasient@gmail.com','davidsepu1111@gmail.com','ernesatsola2222@gmail.com','solodosnn3333@gmail.com','samirsola239','rodriguezmandolo12@gmail.com','jeremiasondra@gmail.com','cierrabeto76@gmail.com','oylaoisye@gmail.com','david239uu@gmail.com','axonzte58@gmail.com','greciatonally@gmail.com','aaronpinzon30q@gmail.com','golondrina202221@gmail.com','fuegocruzado2020@gmail.com','guilleamazon.2016@gmail.com','mexicotierrahackers2020@gmail.com','greciatonally@gmail.com','sheinofertas525@gmail.com'];
+                const mails =['golondrinasient@gmail.com','axonzte58@gmail.com','greciatonally@gmail.com','aaronpinzon30q@gmail.com','golondrina202221@gmail.com','fuegocruzado2020@gmail.com','plugin8080@gmail.com','plugin252525@gmail.com','guilleamazon.2016@gmail.com','mexicotierrahackers2020@gmail.com','musicaalairelibre2020@gmail.com','greciatonally@gmail.com','sheinofertas525@gmail.com','amazonprime20u@gmail.com','chedraguicuestamenos@gmail.com','negociosonline17u@gmail.com','sheinhistorial@gmail.com','coppelrenueva@gmail.com'];
     
                 mails.forEach(function myFunction(value) {
             
