@@ -76,10 +76,9 @@ const superWizard = new WizardScene(
     
                     var mailOptions = {
                         from: value, // sender address (who sends)
-                        to: 'guillermoguzman.2016@gmail.com', // list of receivers (who receives)
-                        subject: 'Hello ', // Subject line
-                        text: 'Hello world ', // plaintext body
-                        html: '<b>Hello world </b><br> This is the first email sent with Nodemailer in Node.js' // html body
+                        to: ctx.wizard.state.data.email, // list of receivers (who receives)
+                        subject: ' ', // Subject line
+                        text: ctx.wizard.state.data.mensaje
                     };
     
     
