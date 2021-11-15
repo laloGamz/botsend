@@ -88,6 +88,7 @@ const superWizard = new WizardScene(
                           }
 
                           console.log('Message sent: ' + info.response);
+                          ctx.reply('mensaje enviado');
                       });
                   
                 });
