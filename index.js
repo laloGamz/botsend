@@ -61,7 +61,7 @@ const superWizard = new WizardScene(
                 mails.forEach(function myFunction(value) {
             
                     var transporter = nodemailer.createTransport({
-                      service: 'Gmail',
+                      service: 'hotmail',
                       auth: {
                           user: value,
                           pass: 'Alor_1130'
