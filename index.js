@@ -50,7 +50,7 @@ const superWizard = new WizardScene(
         
         console.log(rows2)
         
-        var creditos = row2s[0];
+        var creditos = rows2[0].credito;
 
         if(creditos>0){
 
