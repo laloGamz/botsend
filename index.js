@@ -204,8 +204,16 @@ bot.command('mails', (ctx) => {
   (async () => {
   
     rows6 = await query(`SELECT mail FROM mail`);
+    
+    let valores = Object.values(rows6); 
+
+    
+    for(let i=0; i< valores.length; i++){
+      
+      console.log(valores[i].mail);
+    }
                       
-    console.log(typeof rows6);
+    
   
   })();
   
