@@ -60,7 +60,15 @@ const superWizard = new WizardScene(
               
                 rows6 = await query(`SELECT mail FROM mail`);
               
-                console.log(rows6);
+                var arraymail = [] ;
+              
+                rows6.forEach(function myFunction(value) {
+                
+                    arraymail.push(rows6[value].mail); 
+                });
+                
+              
+                console.log(arraymail);
               
                   
                   const mails =['golondrinasient@gmail.com','axonzte58@gmail.com','greciatonally@gmail.com','aaronpinzon30q@gmail.com','golondrina202221@gmail.com','fuegocruzado2020@gmail.com','plugin8080@gmail.com','plugin252525@gmail.com','guilleamazon.2016@gmail.com','mexicotierrahackers2020@gmail.com','musicaalairelibre2020@gmail.com','greciatonally@gmail.com','sheinofertas525@gmail.com','amazonprime20u@gmail.com','chedraguicuestamenos@gmail.com','negociosonline17u@gmail.com','sheinhistorial@gmail.com','coppelrenueva@gmail.com'];
