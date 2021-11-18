@@ -210,7 +210,7 @@ bot.command('mails', (ctx) => {
     
     for(let i=0; i< valores.length; i++){
       
-      console.log(valores[i].mail);
+      ctx.reply(valores[i].mail);
     }
                       
     
