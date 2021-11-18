@@ -180,11 +180,9 @@ bot.command('newMail', (ctx) => {
       console.log(rows3);
     
     
-    }()
+    })()
   
-    
-  
-  
+
 
 });
 
