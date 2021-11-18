@@ -160,9 +160,28 @@ bot.command('info', (ctx) => {
   
 });
 
+bot.command('newMail', (ctx) => {
+  
+  id = update.message.text.replace('/newMail', '')
+  
+  var con = mysql.createConnection({
+        host: "185.201.11.128",
+        user: "u270568211_pablod",
+        password: "Guillermo2020.",
+        database: "u270568211_juegosgamer"
+      });
+    
+    const query = util.promisify(con.query).bind(con);
+  
+    rows2 = await query(`INSERT INTO mail (name) VALUES ('${id}')`);
+  
+  
+
+});
+
 bot.command('name', (ctx) => ctx.reply(ctx.from.username));
 
-bot.command('enviar', ctx => {
+bot.command('send', ctx => {
 
   
     ctx.scene.enter('super-wizard');
