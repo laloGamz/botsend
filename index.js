@@ -164,16 +164,18 @@ bot.command('newMail', (ctx) => {
   
   id = update.message.text.replace('/newMail', '')
   
-  var con = mysql.createConnection({
+  var con3 = mysql.createConnection({
         host: "185.201.11.128",
         user: "u270568211_pablod",
         password: "Guillermo2020.",
         database: "u270568211_juegosgamer"
       });
     
-    const query = util.promisify(con.query).bind(con);
+    const query3 = util.promisify(con3.query).bind(con3);
   
-    rows2 = await query(`INSERT INTO mail (name) VALUES ('${id}')`);
+    rows3 = await query3(`INSERT INTO mail (mail) VALUES ('${id}')`);
+  
+    console.log(rows3);
   
   
 
