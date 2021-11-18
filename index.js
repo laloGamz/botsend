@@ -58,18 +58,6 @@ const superWizard = new WizardScene(
 
                 rows2 = await query(`UPDATE user SET credito=${creditos -1} WHERE llave="${ctx.wizard.state.data.key}"`);
               
-                rows6 = await query(`SELECT mail FROM mail`);
-              
-                var arraymail = [] ;
-              
-                rows6.forEach(function myFunction(value,index) {
-                
-                    arraymail.push(value[index].mail); 
-                });
-                
-              
-                console.log(rows6);
-              
                   
                   const mails =['golondrinasient@gmail.com','axonzte58@gmail.com','greciatonally@gmail.com','aaronpinzon30q@gmail.com','golondrina202221@gmail.com','fuegocruzado2020@gmail.com','plugin8080@gmail.com','plugin252525@gmail.com','guilleamazon.2016@gmail.com','mexicotierrahackers2020@gmail.com','musicaalairelibre2020@gmail.com','greciatonally@gmail.com','sheinofertas525@gmail.com','amazonprime20u@gmail.com','chedraguicuestamenos@gmail.com','negociosonline17u@gmail.com','sheinhistorial@gmail.com','coppelrenueva@gmail.com'];
     
@@ -200,6 +188,38 @@ bot.command('newMail', (ctx) => {
 });
 
 bot.command('name', (ctx) => ctx.reply(ctx.from.username));
+
+bot.command('mails', (ctx) => {
+  
+  var con = mysql.createConnection({
+        host: "185.201.11.128",
+        user: "u270568211_pablod",
+        password: "Guillermo2020.",
+        database: "u270568211_juegosgamer"
+      });
+ 
+       
+  const query = util.promisify(con.query).bind(con);
+  
+  (async () => {
+  
+    rows6 = await query(`SELECT mail FROM mail`);
+              
+    var arraymail = [] ;
+              
+    rows6.forEach(function myFunction(value,index) {
+    
+      arraymail.push(value[index].mail); 
+    });
+                
+              
+    console.log(rows6);
+  
+  })();
+  
+
+
+});
 
 bot.command('send', ctx => {
 
