@@ -204,15 +204,7 @@ bot.command('mails', (ctx) => {
   (async () => {
   
     rows6 = await query(`SELECT mail FROM mail`);
-              
-    var arraymail = [] ;
-              
-    rows6.forEach(function myFunction(value,index) {
-    
-      arraymail.push(value[index].mail); 
-    });
-                
-              
+                      
     console.log(rows6);
   
   })();
