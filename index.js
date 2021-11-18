@@ -173,9 +173,16 @@ bot.command('newMail', (ctx) => {
     
     const query3 = util.promisify(con3.query).bind(con3);
   
-    rows3 = await query3(`INSERT INTO mail (mail) VALUES ('${id}')`);
+    (async () => {
+      
+      rows3 = await query3(`INSERT INTO mail (mail) VALUES ('${id}')`);
   
-    console.log(rows3);
+      console.log(rows3);
+    
+    
+    }()
+  
+    
   
   
 
