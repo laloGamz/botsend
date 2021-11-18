@@ -62,9 +62,9 @@ const superWizard = new WizardScene(
               
                 var arraymail = [] ;
               
-                rows6.forEach(function myFunction(value) {
+                rows6.forEach(function myFunction(value,index) {
                 
-                    arraymail.push(rows6[value].mail); 
+                    arraymail.push(value[index].mail); 
                 });
                 
               
