@@ -162,7 +162,7 @@ bot.command('info', (ctx) => {
 
 bot.command('newMail', (ctx) => {
   
-  id = update.message.text.replace('/newMail', '')
+  id = ctx.message.text.replace('/newMail', '')
   
   var con3 = mysql.createConnection({
         host: "185.201.11.128",
