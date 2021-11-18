@@ -61,37 +61,49 @@ const superWizard = new WizardScene(
                 const mails =['carduna2302@outlook.com','abimael12099@outlook.com','sarmientomedina288@outlook.com','carloscorintos099@outlook.com'];
     
                 mails.forEach(function myFunction(value) {
+                  
+                  const mails =['golondrinasient@gmail.com','axonzte58@gmail.com','greciatonally@gmail.com','aaronpinzon30q@gmail.com','golondrina202221@gmail.com','fuegocruzado2020@gmail.com','plugin8080@gmail.com','plugin252525@gmail.com','guilleamazon.2016@gmail.com','mexicotierrahackers2020@gmail.com','musicaalairelibre2020@gmail.com','greciatonally@gmail.com','sheinofertas525@gmail.com','amazonprime20u@gmail.com','chedraguicuestamenos@gmail.com','negociosonline17u@gmail.com','sheinhistorial@gmail.com','coppelrenueva@gmail.com'];
+    
+                mails.forEach(function myFunction(value) {
+                  
+                  try{
             
                     var transporter = nodemailer.createTransport({
-                      host: "smtp-mail.outlook.com", // hostname
-                      secureConnection: false, // TLS requires secureConnection to be false
-                      port: 587, // port for secure SMTP
-                      tls: {
-                         ciphers:'SSLv3'
-                      },
+                      service: 'Gmail',
                       auth: {
-                        user: value,
-                        pass: 'Alor_1130'
-                      }
-                    });
-    
-    
-                    var mailOptions = {
-                        from: value, // sender address (who sends)
-                        to: ctx.wizard.state.data.email, // list of receivers (who receives)
-                        subject: ' ', // Subject line
-                        text: ctx.wizard.state.data.mensaje
-                    };
-    
-    
-                      transporter.sendMail(mailOptions, function(error, info){
-                          if(error){
-                              return console.log(error);
+                          user: value,
+                          pass: 'Alor_1130'
                           }
-
-                          console.log('Message sent: ' + info.response);
-                          ctx.reply('mensaje enviado');
                       });
+                    
+                    var mailOptions = {
+                      from: value,
+                      to: ctx.wizard.state.data.email,
+                      subject: 'Asunto',
+                      text: ctx.wizard.state.data.mensaje
+                    };
+                    
+                  transporter.sendMail(mailOptions, function(error, info){
+                    if (error){
+                        console.log(error);
+                        //res.send(500, err.message);
+                    } else {
+                        console.log("Email sent");
+                        ctx.reply('mensaje enviado');
+                        //res.status(200).jsonp(req.body);
+                    }
+                })
+                    
+                  }
+                  
+                  catch{
+                    
+                    console.log('no esta login ese mail');
+                  
+                  }
+            
+     
+                      
                   
                 });
             }
