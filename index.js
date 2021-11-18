@@ -205,10 +205,7 @@ bot.command('mails', (ctx) => {
   
     rows6 = await query(`SELECT mail FROM mail`);
                       
-    rows6.forEach( function(valor, indice) {
-      
-    ctx.reply(valor[indice].mail);
-});
+    console.log(typeof rows6);
   
   })();
   
