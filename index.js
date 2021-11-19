@@ -179,6 +179,8 @@ bot.command('newMail', (ctx) => {
       rows3 = await query3(`INSERT INTO mail (mail) VALUES ('${id}')`);
   
       console.log(rows3);
+      
+      con3.end();
     
     
     })()
@@ -212,6 +214,8 @@ bot.command('mails', (ctx) => {
       
       ctx.reply(valores[i].mail);
     }
+    
+    con.end();
                       
     
   
