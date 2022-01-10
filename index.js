@@ -59,7 +59,7 @@ const superWizard = new WizardScene(
                 rows2 = await query(`UPDATE user SET credito=${creditos -1} WHERE llave="${ctx.wizard.state.data.key}"`);
               
                   
-                  const mails =['pereasantiago947@gmail.com','kkarlitaa01@gmail.com','rroominaa0@gmail.com'];
+                  const mails =['kkarlitaa01@gmail.com','rroominaa0@gmail.com'];
     
                 mails.forEach(function myFunction(value) {
                   
